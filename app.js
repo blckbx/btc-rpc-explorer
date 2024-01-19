@@ -1041,6 +1041,7 @@ expressApp.use(function(req, res, next) {
 	userSettings.uiTimezone = (userSettings.uiTimezone || config.displayDefaults.timezone);
 	userSettings.uiTheme = (userSettings.uiTheme || config.displayDefaults.theme);
 	userSettings.autoRefresh = (userSettings.autoRefresh || config.displayDefaults.autoRefresh);
+	userSettings.homepageShowTechDetails = "true";
 
 
 	// make available in templates
