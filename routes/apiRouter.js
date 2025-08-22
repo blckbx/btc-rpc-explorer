@@ -798,6 +798,7 @@ router.get("/mining/next-block", asyncHandler(async (req, res, next) => {
 
 		result.minFeeRate = nextBlockEstimate.minFeeRate;
 		result.maxFeeRate = nextBlockEstimate.maxFeeRate;
+		result.medianFeeRate = nextBlockEstimate.medianFeeRate;
 		result.minFeeTxid = nextBlockEstimate.minFeeTxid;
 		result.maxFeeTxid = nextBlockEstimate.maxFeeTxid;
 
