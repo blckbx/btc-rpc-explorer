@@ -908,6 +908,15 @@ router.get("/mempool/summary", function(req, res, next) {
 	}).catch(next);
 });
 
+router.get("/mempool/count", function(req, res, next) {
+	coreApi.getMempoolInfo().then(function(info){
+		//res.json(info.size);
+		res.send({
+			size: info.size
+		});
+	}).catch(next);
+});
+
 router.get("/mempool/fees", asyncHandler(async (req, res, next) => {
 	let feeConfTargets = [1, 3, 6, 144];	
 	let rawSmartFeeEstimates = await coreApi.getSmartFeeEstimates("CONSERVATIVE", feeConfTargets);
