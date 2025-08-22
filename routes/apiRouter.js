@@ -910,7 +910,6 @@ router.get("/mempool/summary", function(req, res, next) {
 
 router.get("/mempool/count", function(req, res, next) {
 	coreApi.getMempoolInfo().then(function(info){
-		//res.json(info.size);
 		res.send({
 			size: info.size
 		});
