@@ -4,6 +4,7 @@ This changelog specifically tracks changes to the Public API available at `/api`
 ###### Unreleased
 
 * Changed `/api/mempool/fees` to include more details pertaining to `nextBlock` (nextBlock.smart is where the previous "nextBlock" scalar value used to be)
+* Added `medianFeeRate` to endpoint `/api/mining/next-block`
 
 ##### v2.0.0
 ###### 2023-06-14
