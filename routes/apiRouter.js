@@ -950,8 +950,13 @@ router.get("/mempool/fees", asyncHandler(async (req, res, next) => {
 
 
 
-
-
+ /// NETWORKINFO
+ 
+router.get("/networkinfo", asyncHandler(async (req, res, next) => {
+        coreApi.getNetworkInfo().then(function(info){
+                res.json(info);
+         }).catch(next);
+}));
 
 
 /// PRICE
