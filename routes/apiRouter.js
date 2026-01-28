@@ -966,6 +966,13 @@ router.get("/getnettotals", asyncHandler(async (req, res, next) => {
          }).catch(next);
 }));
 
+/// BLOCKCHAININFO
+
+router.get("/blockchaininfo", asyncHandler(async (req, res, next) => {
+        coreApi.getBlockchainInfo().then(function(info){
+                res.json(info);
+         }).catch(next);
+}));
 
 /// PRICE
 
