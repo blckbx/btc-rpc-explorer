@@ -958,6 +958,14 @@ router.get("/networkinfo", asyncHandler(async (req, res, next) => {
          }).catch(next);
 }));
 
+/// GETNETTOTALS
+
+router.get("/getnettotals", asyncHandler(async (req, res, next) => {
+        coreApi.getNetTotals().then(function(info){
+                res.json(info);
+         }).catch(next);
+}));
+
 
 /// PRICE
 
